@@ -31,5 +31,8 @@ gulp.task("copy:libs", ["clean:libs"], function () {
 	var rxjs = gulp.src(paths.node_modules + "rxjs/bundles/**/*.js")
         .pipe(gulp.dest(paths.libDest + "rxjs"));
 
-	return merge(angular2, systemjs, rxjs);
+	var zonejs = gulp.src(paths.node_modules + "zone.js/dist/*.js")
+		.pipe(gulp.dest(paths.libDest + "zonejs"));
+
+	return merge(angular2, systemjs, rxjs, zonejs);
 });

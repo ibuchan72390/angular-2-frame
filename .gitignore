@@ -240,3 +240,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+
+#Dynamically generated client libraries
+src/Angular_2_Test/wwwroot/lib
